@@ -3,10 +3,10 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
-	<display-name>deep2</display-name>
+	<display-name>nettyLearning</display-name>
 	<context-param> 
 		<param-name>webAppRootKey</param-name> 
-		<param-value>deep2.root </param-value> 
+		<param-value>nettyLearning.root </param-value> 
     </context-param> 
 	<listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
@@ -24,7 +24,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-		classpath:spring/deep2-context.xml,classpath:spring/deep2-servlet.xml,classpath:spring/deep2-security.xml
+		classpath:spring/netty-context.xml
 		</param-value>
 	</context-param>
 	
@@ -41,17 +41,17 @@
 	</listener>
 	
 	<servlet>
-		<servlet-name>deep2</servlet-name>
+		<servlet-name>netty</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:spring/deep2-servlet.xml</param-value>
+			<param-value>classpath:spring/netty-servlet.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>deep2</servlet-name>
+		<servlet-name>netty</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
